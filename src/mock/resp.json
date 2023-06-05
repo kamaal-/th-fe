@@ -1,0 +1,174 @@
+{
+  "data": {
+    "contentCards": {
+      "edges": [
+        {
+          "name": "audio Vincent",
+          "id": "4df31710-345b-4b10-8658-9d9a4da68d85",
+          "updatedAt": "2023-06-03T06:56:55.226625Z",
+          "categories": [
+            {
+              "name": "category Enola",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Ila",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Loyal",
+              "__typename": "Category"
+            }
+          ],
+          "image": {
+            "uri": "https://images.staging.tigerhall.io/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+            "__typename": "Image"
+          },
+          "experts": [
+            {
+              "firstName": "Reilly",
+              "lastName": "Brakus",
+              "title": "",
+              "company": "",
+              "__typename": "Expert"
+            }
+          ],
+          "__typename": "Podcast"
+        },
+        {
+          "name": "audio Mauricio",
+          "id": "72f5f8ec-8e3a-4cbb-ad9c-c5eb552d9493",
+          "updatedAt": "2023-06-03T06:56:55.226625Z",
+          "categories": [
+            {
+              "name": "category Enola",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Kailey",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Loyal",
+              "__typename": "Category"
+            }
+          ],
+          "image": {
+            "uri": "https://images.staging.tigerhall.io/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+            "__typename": "Image"
+          },
+          "experts": [
+            {
+              "firstName": "Chadd",
+              "lastName": "Waelchi",
+              "title": "",
+              "company": "",
+              "__typename": "Expert"
+            }
+          ],
+          "__typename": "Podcast"
+        },
+        {
+          "name": "audio Cleta",
+          "id": "1a09a911-8296-4989-b8a6-3b42bd2c7ce5",
+          "updatedAt": "2023-06-03T06:56:55.226625Z",
+          "categories": [
+            {
+              "name": "category Enola",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Loyal",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Susanna",
+              "__typename": "Category"
+            }
+          ],
+          "image": {
+            "uri": "https://images.staging.tigerhall.io/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+            "__typename": "Image"
+          },
+          "experts": [
+            {
+              "firstName": "Logan",
+              "lastName": "Schaefer",
+              "title": "",
+              "company": "",
+              "__typename": "Expert"
+            }
+          ],
+          "__typename": "Podcast"
+        },
+        {
+          "name": "audio Claudie",
+          "id": "2a1984ba-464d-4ab8-909b-e939629e4646",
+          "updatedAt": "2023-06-03T06:56:55.226625Z",
+          "categories": [
+            {
+              "name": "category Kailey",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Loyal",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Susanna",
+              "__typename": "Category"
+            }
+          ],
+          "image": {
+            "uri": "https://images.staging.tigerhall.io/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+            "__typename": "Image"
+          },
+          "experts": [
+            {
+              "firstName": "Reilly",
+              "lastName": "Brakus",
+              "title": "",
+              "company": "",
+              "__typename": "Expert"
+            }
+          ],
+          "__typename": "Podcast"
+        },
+        {
+          "name": "audio Savanah",
+          "id": "8ffe92cc-4794-49ae-911f-485c124a301a",
+          "updatedAt": "2023-06-03T06:56:55.226625Z",
+          "categories": [
+            {
+              "name": "category Enola",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Kailey",
+              "__typename": "Category"
+            },
+            {
+              "name": "category Loyal",
+              "__typename": "Category"
+            }
+          ],
+          "image": {
+            "uri": "https://images.staging.tigerhall.io/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+            "__typename": "Image"
+          },
+          "experts": [
+            {
+              "firstName": "Mozelle",
+              "lastName": "Lemke",
+              "title": "",
+              "company": "",
+              "__typename": "Expert"
+            }
+          ],
+          "__typename": "Podcast"
+        }
+      ],
+      "__typename": "ContentConnection"
+    }
+  }
+}
