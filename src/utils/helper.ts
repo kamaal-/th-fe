@@ -15,3 +15,8 @@ export const cleanupFirstWord = (str: string): string => {
 export const getCategoriesFromGQL = (
   categories: Array<GQL.ICategory>
 ): string => categories.map((c) => cleanupFirstWord(c.name)).join(", ");
+
+export const findIndexOfRegexMatcher = (url: string, regex: RegExp): number => {
+  const match = regex.exec(url);
+  return match ? match[0].length : -1;
+};
