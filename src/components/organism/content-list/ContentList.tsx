@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Content from "../content/Content.tsx";
 import { useMemo } from "react";
 import Loader from "../../atoms/loader/Loader.tsx";
+import Empty from "../../atoms/empty/Empty.tsx";
 
 type Props = {
   data: Array<UI.IPodcast>;
@@ -25,9 +26,11 @@ function ContentList({ data, loading }: Props) {
   return !loading ? (
     <AnimatePresence>
       <motion.div variants={variants}>
-        {data.map((d) => (
-          <Content key={d.id} podcast={d} loading={loading} />
-        ))}
+        {data.length ? (
+          data.map((d) => <Content key={d.id} podcast={d} loading={loading} />)
+        ) : (
+          <Empty />
+        )}
       </motion.div>
     </AnimatePresence>
   ) : (

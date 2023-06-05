@@ -26,7 +26,9 @@ export default function (gql: DocumentNode): GQL.UseQueryReturnType {
       )
       .subscribe(() => {
         /* c8 ignore next */
-        setLoader(false);
+        window.requestAnimationFrame(() => {
+          setLoader(false);
+        });
       });
     return () => sub.unsubscribe();
     // eslint-disable-next-line
