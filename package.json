@@ -13,6 +13,8 @@
     "test:c": "vitest run --coverage"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
