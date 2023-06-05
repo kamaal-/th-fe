@@ -13,7 +13,7 @@ export default defineConfig({
       provider: "c8",
       thresholdAutoUpdate: true,
       statements: 100,
-      branches: 82,
+      branches: 100,
       functions: 100,
       lines: 100,
     },
