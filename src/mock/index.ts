@@ -1,6 +1,6 @@
 import { GET_PODCASTS } from "../apollo";
 import data from "./resp.json";
-import { GQL } from "../@types";
+import { GQL, UI } from "../@types";
 import jsonData from "./resp.json";
 
 export const RESP_DATA: GQL.IPodcastResponse = {
@@ -31,5 +31,98 @@ export const categories = [
   {
     name: "Dog",
     __typename: "dog",
+  },
+];
+
+export const PODCAST_LIST: Array<UI.IPodcast> = [
+  {
+    categories: "Enola, Ila, Loyal",
+    updatedAt: "a few seconds ago",
+    experts: [
+      {
+        company: "",
+        firstName: "Reilly",
+        lastName: "Brakus",
+        title: "",
+      },
+    ],
+    id: "4df31710-345b-4b10-8658-9d9a4da68d85",
+    image: {
+      uri: "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+    },
+    name: "Vincent",
+    length: 1587,
+  },
+  {
+    categories: "Enola, Kailey, Loyal",
+    updatedAt: "a few seconds ago",
+    experts: [
+      {
+        company: "",
+        firstName: "Chadd",
+        lastName: "Waelchi",
+        title: "",
+      },
+    ],
+    id: "72f5f8ec-8e3a-4cbb-ad9c-c5eb552d9493",
+    image: {
+      uri: "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+    },
+    name: "Mauricio",
+    length: 1587,
+  },
+  {
+    categories: "Enola, Loyal, Susanna",
+    updatedAt: "a few seconds ago",
+    length: 1587,
+    experts: [
+      {
+        company: "",
+        firstName: "Logan",
+        lastName: "Schaefer",
+        title: "",
+      },
+    ],
+    id: "1a09a911-8296-4989-b8a6-3b42bd2c7ce5",
+    image: {
+      uri: "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+    },
+    name: "Cleta",
+  },
+  {
+    categories: "Kailey, Loyal, Susanna",
+    updatedAt: "a few seconds ago",
+    length: 1587,
+    experts: [
+      {
+        company: "",
+        firstName: "Reilly",
+        lastName: "Brakus",
+        title: "",
+      },
+    ],
+    id: "2a1984ba-464d-4ab8-909b-e939629e4646",
+    image: {
+      uri: "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+    },
+    name: "Claudie",
+  },
+  {
+    categories: "Enola, Kailey, Loyal",
+    updatedAt: "a few seconds ago",
+    length: 1587,
+    experts: [
+      {
+        company: "",
+        firstName: "Mozelle",
+        lastName: "Lemke",
+        title: "",
+      },
+    ],
+    id: "8ffe92cc-4794-49ae-911f-485c124a301a",
+    image: {
+      uri: "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png",
+    },
+    name: "Savanah",
   },
 ];
