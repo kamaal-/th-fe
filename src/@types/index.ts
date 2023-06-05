@@ -1,6 +1,18 @@
 import { ApolloError } from "@apollo/client";
 
 export namespace UI {
+  export interface UIContext {
+    loading: boolean;
+    placeholderImage: boolean;
+    setLoading: (loading: boolean) => void;
+    setPlaceHolderImages: (placeholderImage: boolean) => void;
+  }
+
+  export interface UIContextValue {
+    loading: boolean;
+    placeholderImage: boolean;
+  }
+
   export interface IExpert {
     firstName: string;
     lastName: string;

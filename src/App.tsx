@@ -8,7 +8,6 @@ import ContentList from "./components/organism/content-list/ContentList.tsx";
 
 function App() {
   const { updateSearch, data, loading } = useRxQuery(GET_PODCASTS);
-  console.log(data);
   return (
     <main role="app">
       <div>

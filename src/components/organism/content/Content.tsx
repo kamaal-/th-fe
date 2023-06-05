@@ -3,13 +3,14 @@ import { UI } from "../../../@types";
 import { motion, usePresence } from "framer-motion";
 import { useMemo } from "react";
 import "./content.sass";
+import Cover from "../../molecules/cover/Cover.tsx";
 
 type Props = {
   podcast: UI.IPodcast | null;
   loading: boolean;
 };
 
-function Content(props: Props) {
+function Content({ podcast }: Props) {
   const [isPresent, safeToRemove] = usePresence();
 
   const variants = useMemo(
@@ -31,15 +32,16 @@ function Content(props: Props) {
       whileTap={"tapped"}
       layout={true}
       initial={"exit"}
+      /* c8 ignore start */
       onAnimationComplete={() => !isPresent && safeToRemove()}
-      /* c8 ignore next */
       style={{ position: isPresent ? "static" : "absolute" }}
-      /* c8 ignore next */
       animate={isPresent ? "enter" : "exit"}
+      /* c8 ignore stop */
       variants={variants}
       className="content"
     >
-      <div>{props.podcast?.name}</div>
+      <Cover uri={podcast?.image.uri} length={podcast?.length} />
+      <div>{podcast?.name}</div>
       <Completed />
     </motion.section>
   );
