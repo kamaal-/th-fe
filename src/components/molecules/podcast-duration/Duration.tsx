@@ -7,7 +7,7 @@ type Props = {
 
 function Duration({ length = 0 }: Props) {
   return (
-    <div className="duration">
+    <div role="duration" className="duration">
       <ClockIcon boxSize={"1rem"} />
       <span className="duration__text">{`${(length / 60).toFixed(0)}m`}</span>
     </div>
