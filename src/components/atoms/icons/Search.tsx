@@ -4,6 +4,7 @@ function Search(props: IconProps) {
   return (
     <Icon {...props}>
       <path
+        role="search"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"

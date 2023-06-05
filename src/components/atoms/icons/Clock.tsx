@@ -10,7 +10,7 @@ function Clock(props: IconProps) {
         strokeLinejoin="round"
       >
         <circle cx="12" cy="12" r="9" />
-        <path d="M11 8v5h5" />
+        <path role="clock" d="M11 8v5h5" />
       </g>
     </Icon>
   );
