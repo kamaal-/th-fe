@@ -12,3 +12,14 @@ export const mocks = [
     },
   },
 ];
+
+export const categories = [
+  {
+    name: "Cat",
+    __typename: "cat",
+  },
+  {
+    name: "Dog",
+    __typename: "dog",
+  },
+];
