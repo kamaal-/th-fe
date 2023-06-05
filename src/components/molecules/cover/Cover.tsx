@@ -2,6 +2,7 @@ import "./cover.sass";
 import Completed from "../completed/Completed.tsx";
 import CoverImage from "../../atoms/cover-image/CoverImage.tsx";
 import CoverMeta from "./CoverMeta.tsx";
+import Bar from "../completed/Bar.tsx";
 
 type Props = {
   uri: string | undefined;
@@ -13,6 +14,7 @@ function Cover({ uri, length }: Props) {
     <div className="cover" role="cover">
       <CoverImage url={uri} />
       <Completed />
+      <Bar />
       <CoverMeta length={length} />
     </div>
   );

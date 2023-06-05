@@ -22,7 +22,7 @@ describe("<App/>", () => {
         <App />
       </MockedProvider>
     );
-    const input: HTMLInputElement = await screen.findByRole("search");
+    const input: HTMLInputElement = await screen.findByRole("search-input");
     await user.type(input, "Hi");
     expect(await input).toHaveValue("Hi");
   });
