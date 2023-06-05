@@ -1,0 +1,26 @@
+@import "../../../variables"
+.search
+  display: flex
+  padding: 1rem
+  margin-top: 1rem
+  position: sticky
+  top: 0
+  z-index: 999
+  background-color: $teal_1000
+  &__input
+    padding: .8rem .8rem .8rem 2.5rem
+    width: 100%
+    border: 1px solid $gray_700
+    border-radius: .25rem
+    background-color: $gray_900
+    color: $white
+    font-size: 1rem
+  &__icon
+    & path
+        stroke: $white
+    &__wrapper
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 2.5rem
+      height: 100%

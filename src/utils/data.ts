@@ -3,10 +3,11 @@ import {
   cleanupFirstWord,
   getCategoriesFromGQL,
   omitPropFromList,
-  fixImageURLWithSize,
-  domainMatcher,
+  //fixImageURLWithSize,
+  //domainMatcher,
 } from "./helper.ts";
 import moment from "moment";
+import { mock_image } from "../mock";
 
 export const transformDataToFitUI = (
   data: GQL.IPodcastResponse | undefined
@@ -20,7 +21,7 @@ export const transformDataToFitUI = (
         updatedAt: moment(e.updatedAt).fromNow(),
         experts: omitPropFromList(e.experts, "__typename") as Array<UI.IExpert>,
         image: {
-          uri: fixImageURLWithSize(e.image.uri, domainMatcher, 600),
+          uri: mock_image, // fixImageURLWithSize(e.image.uri, domainMatcher, 600),
         },
       }))
     : [];

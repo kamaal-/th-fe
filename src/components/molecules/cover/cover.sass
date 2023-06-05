@@ -1,0 +1,24 @@
+@import "../../../variables"
+.cover
+  position: relative
+  height: 150px
+  margin: 0 -.5rem 0 -.5rem
+  &__meta
+    position: absolute
+    z-index: 5
+    bottom: 1rem
+    left: .5rem
+    right: .5rem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &__icon
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 1.5rem
+      height: 1.5rem
+      background-color: $main_brand
+      border-radius: 100%
+      & path
+        fill: $white

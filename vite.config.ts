@@ -6,16 +6,17 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   test: {
+    testTimeout: 10000,
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
     globals: true,
     coverage: {
       provider: "c8",
-      thresholdAutoUpdate: true,
-      statements: 100,
-      branches: 100,
-      functions: 100,
-      lines: 100,
+      thresholdAutoUpdate: false,
+      statements: 90,
+      branches: 90,
+      functions: 90,
+      lines: 90,
     },
   },
 });

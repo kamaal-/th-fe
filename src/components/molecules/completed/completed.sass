@@ -1,9 +1,11 @@
+@import "../../../variables"
+
 .completed
   position: absolute
   display: flex
   align-items: center
   background-color: white
-  margin-left: -0.5rem
+  margin-left: 0
   border-top-left-radius: 0.5rem
   border-bottom-right-radius: 0.5rem
   padding: 0.25rem 0.5rem
@@ -12,3 +14,16 @@
     margin-left: 0.5rem
     font-size: 0.8rem
     font-weight: 600
+  &__track
+    position: absolute
+    z-index: 8
+    left: 0
+    right: 0
+    bottom: 0
+    height: .25rem
+    width: 100%
+    background-color: $gray_400
+  &__bar
+    height: .25rem
+    background-color: $tiger_orange
+
