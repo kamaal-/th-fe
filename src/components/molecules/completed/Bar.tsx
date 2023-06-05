@@ -14,6 +14,7 @@ function Bar({ percentage = 45 }: Props) {
   return (
     <div className="completed__track">
       <motion.div
+        role="bar"
         className="completed__bar"
         initial={{ width: 0 }}
         animate={{ width: `${percent}%` }}

@@ -12,7 +12,7 @@ describe("<App/>", () => {
         <App />
       </MockedProvider>
     );
-    expect(await screen.findAllByRole("content-list")).toBeDefined();
+    expect(await screen.findByRole("loader")).toBeDefined();
   });
 
   test("<App/> Should be able to type text", async () => {

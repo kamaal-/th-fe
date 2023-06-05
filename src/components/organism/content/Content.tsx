@@ -13,7 +13,6 @@ type Props = {
 };
 
 function Content({ podcast }: Props) {
-  console.log(podcast);
   const [isPresent, safeToRemove] = usePresence();
 
   const variants = useMemo(
