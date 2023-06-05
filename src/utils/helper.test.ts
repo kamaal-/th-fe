@@ -4,9 +4,12 @@ import {
   cleanupFirstWord,
   findIndexOfRegexMatcher,
   omitPropFromObject,
+  domainMatcher,
   omitPropFromList,
+  getResizeSegment,
+  fixImageURLWithSize,
 } from "./helper.ts";
-import { categories } from "../mock";
+import { categories, RESP_DATA } from "../mock";
 
 describe("Helper", () => {
   test("<cleanupFirstWord> Should trim audio", () => {
@@ -49,5 +52,46 @@ describe("Helper", () => {
       { name: "Cat" },
       { name: "Dog" },
     ]);
+  });
+
+  test("<fixImageURLWithSize> should return 320x", () => {
+    expect(
+      fixImageURLWithSize(
+        RESP_DATA.contentCards.edges[0].image.uri,
+        domainMatcher
+      )
+    ).equals(
+      "https://images.staging.tigerhall.io/resize/320x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png"
+    );
+  });
+
+  test("<fixImageURLWithSize> should return 600x", () => {
+    expect(
+      fixImageURLWithSize(
+        RESP_DATA.contentCards.edges[0].image.uri,
+        domainMatcher,
+        600
+      )
+    ).equals(
+      "https://images.staging.tigerhall.io/resize/600x/2023-06-01/52b0c98e-7b3d-42c7-ae41-902df14c3f76.png"
+    );
+  });
+
+  test("<fixImageURLWithSize> should not update the url", () => {
+    expect(
+      fixImageURLWithSize(
+        RESP_DATA.contentCards.edges[0].image.uri,
+        new RegExp("^xml"),
+        600
+      )
+    ).equals(RESP_DATA.contentCards.edges[0].image.uri);
+  });
+
+  test("<getResizeSegment> should return /resize/600x", () => {
+    expect(getResizeSegment(600)).equals("/resize/600x");
+  });
+
+  test("<getResizeSegment> should return updater600y", () => {
+    expect(getResizeSegment(600, "updater", "y")).equals("updater600y");
   });
 });

@@ -34,3 +34,22 @@ export const omitPropFromList = <T>(
   key: keyof T
 ): Array<Omit<T, typeof key>> =>
   list.map((item) => omitPropFromObject(item, key));
+
+export const getResizeSegment = (
+  width: number,
+  segment = "/resize/",
+  appender = "x"
+) => `${segment}${width}${appender}`;
+
+export const fixImageURLWithSize = (
+  url: string,
+  regexp: RegExp,
+  width = 320
+): string => {
+  const index = findIndexOfRegexMatcher(url, regexp);
+  return index > -1
+    ? `${url.substring(0, index)}${getResizeSegment(width)}${url.substring(
+        index
+      )}`
+    : url;
+};
