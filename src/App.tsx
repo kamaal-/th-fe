@@ -4,7 +4,7 @@ import { GET_PODCASTS } from "./apollo";
 import { Input } from "@chakra-ui/react";
 import { ChangeEvent } from "react";
 import Loader from "./components/atoms/loader/Loader";
-import { ClockIcon } from "./components/atoms/icons/";
+import ContentList from "./components/organism/content-list/ContentList.tsx";
 
 function App() {
   const { updateSearch, data, loading } = useRxQuery(GET_PODCASTS);
@@ -12,8 +12,6 @@ function App() {
   return (
     <main role="app">
       <div>
-        <ClockIcon />
-        <Loader />
         <Input
           role="search"
           className="search__input"
@@ -22,7 +20,9 @@ function App() {
           }}
         />
       </div>
-      <div>{!loading ? <div>{data.length}</div> : <div>Loading...</div>}</div>
+      <div>
+        {!loading ? <ContentList data={data} loading={loading} /> : <Loader />}
+      </div>
     </main>
   );
 }

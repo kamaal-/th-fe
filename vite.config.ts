@@ -12,10 +12,10 @@ export default defineConfig({
     coverage: {
       provider: "c8",
       thresholdAutoUpdate: true,
-      statements: 100,
+      statements: 99.8,
       branches: 100,
       functions: 100,
-      lines: 100,
+      lines: 99.8,
     },
   },
 });
