@@ -11,7 +11,7 @@ import moment from "moment";
 export const transformDataToFitUI = (
   data: GQL.IPodcastResponse | undefined
 ): Array<UI.IPodcast> => {
-  return data
+  return data && data.contentCards
     ? data.contentCards.edges.map((e) => ({
         categories: getCategoriesFromGQL(e.categories),
         name: cleanupFirstWord(e.name),

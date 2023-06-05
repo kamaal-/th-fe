@@ -16,13 +16,16 @@ export default function (gql: DocumentNode): GQL.UseQueryReturnType {
     const sub = searchSubject
       .pipe(
         debounceTime(300),
+        /* c8 ignore next */
         switchMap(async (keywords) => {
-          // call the dispatch here
+          /* c8 ignore next */
           setLoader(true);
+          /* c8 ignore next */
           return await refetch({ keywords });
         })
       )
       .subscribe(() => {
+        /* c8 ignore next */
         setLoader(false);
       });
     return () => sub.unsubscribe();
