@@ -3,6 +3,8 @@ import {
   getCategoriesFromGQL,
   cleanupFirstWord,
   findIndexOfRegexMatcher,
+  omitPropFromObject,
+  omitPropFromList,
 } from "./helper.ts";
 import { categories } from "../mock";
 
@@ -34,5 +36,18 @@ describe("Helper", () => {
         new RegExp("^http?s:(.*)com")
       )
     ).equals(28);
+  });
+
+  test("<omitPropFromObject>", () => {
+    expect(omitPropFromObject(categories[0], "__typename")).toEqual({
+      name: "Cat",
+    });
+  });
+
+  test("<omitPropFromList>", () => {
+    expect(omitPropFromList(categories, "__typename")).toEqual([
+      { name: "Cat" },
+      { name: "Dog" },
+    ]);
   });
 });
