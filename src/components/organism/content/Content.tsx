@@ -1,9 +1,9 @@
-import Completed from "../../molecules/completed/Completed.tsx";
 import { UI } from "../../../@types";
 import { motion, usePresence } from "framer-motion";
 import { useMemo } from "react";
 import "./content.sass";
 import Cover from "../../molecules/cover/Cover.tsx";
+import ContentHeader from "../../molecules/content-header/ContentHeader.tsx";
 
 type Props = {
   podcast: UI.IPodcast | null;
@@ -41,8 +41,9 @@ function Content({ podcast }: Props) {
       className="content"
     >
       <Cover uri={podcast?.image.uri} length={podcast?.length} />
-      <div>{podcast?.name}</div>
-      <Completed />
+      <main>
+        <ContentHeader title={podcast?.name} subtitle={podcast?.categories} />
+      </main>
     </motion.section>
   );
 }
