@@ -1,0 +1,10 @@
+.content-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.content-footer svg path,
+.content-footer svg g path {
+  stroke: #ff5900;
+}

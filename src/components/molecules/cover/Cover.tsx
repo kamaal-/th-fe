@@ -8,7 +8,7 @@ type Props = {
   length: number | undefined;
 };
 
-function Cover({ uri }: Props) {
+function Cover({ uri, length }: Props) {
   return (
     <div className="cover" role="cover">
       <CoverImage url={uri} />

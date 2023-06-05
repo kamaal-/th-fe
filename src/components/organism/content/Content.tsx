@@ -4,6 +4,8 @@ import { useMemo } from "react";
 import "./content.sass";
 import Cover from "../../molecules/cover/Cover.tsx";
 import ContentHeader from "../../molecules/content-header/ContentHeader.tsx";
+import ContentMeta from "../../molecules/content-meta/ContentMeta.tsx";
+import ContentFooter from "../../molecules/content-footer/ContentFooter.tsx";
 
 type Props = {
   podcast: UI.IPodcast | null;
@@ -11,6 +13,7 @@ type Props = {
 };
 
 function Content({ podcast }: Props) {
+  console.log(podcast);
   const [isPresent, safeToRemove] = usePresence();
 
   const variants = useMemo(
@@ -43,6 +46,8 @@ function Content({ podcast }: Props) {
       <Cover uri={podcast?.image.uri} length={podcast?.length} />
       <main>
         <ContentHeader title={podcast?.name} subtitle={podcast?.categories} />
+        <ContentMeta name={podcast?.categories} date={podcast?.updatedAt} />
+        <ContentFooter />
       </main>
     </motion.section>
   );
